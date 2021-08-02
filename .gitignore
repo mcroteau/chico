@@ -1,0 +1,12 @@
+*.classpath
+*.project
+*.settings
+*.idea
+*.iml
+*.properties
+*.releaseBackup
+*.asc
+*.DS_Store
+*Notes.md
+*output
+*target

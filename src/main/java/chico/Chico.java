@@ -68,7 +68,7 @@ public class Chico {
             httpSession.setAttribute(Chico.USER_KEY, username);
             sessions.put(httpSession.getId(), httpSession);
 
-            if(!Chico.isJetty()){
+            if(!Chico.createCookie()){
                 Cookie cookie = new Cookie(Chico.COOKIE, httpSession.getId());
                 cookie.setPath("/");
 

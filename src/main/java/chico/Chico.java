@@ -181,8 +181,8 @@ public class Chico {
                 passwordHashed.append(Integer.toString((byteData[i] & 0xff) + 0x100, 16).substring(1));
             }
 
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
+        } catch (NoSuchAlgorithmException ex) {
+            ex.printStackTrace();
         }
         return passwordHashed.toString();
     }
@@ -191,5 +191,5 @@ public class Chico {
         Chico.dbSecurityAccess = dbSecurityAccess;
         return true;
     }
-    
+
 }

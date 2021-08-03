@@ -191,15 +191,5 @@ public class Chico {
         Chico.dbSecurityAccess = dbSecurityAccess;
         return true;
     }
-
-    public static boolean createit = false;
-
-    public static void manualCookie(boolean create) {
-        createit = create;
-    }
-
-    public static boolean createCookie(){
-        return createit;
-    }
-
+    
 }

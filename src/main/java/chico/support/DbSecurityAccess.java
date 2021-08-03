@@ -1,4 +1,4 @@
-package chico.support.access;
+package chico.support;
 
 import java.util.Set;
 

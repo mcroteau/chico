@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
-import chico.support.access.DbSecurityAccess;
+import chico.support.DbSecurityAccess;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -50,7 +50,7 @@ public class Chico {
         return "";
     }
 
-    public static boolean login(String username, String password){
+    public static boolean signin(String username, String password){
         String hashedPassword = hash(password);
         String storedPassword = dbSecurityAccess.getPassword(username);
 
@@ -68,11 +68,14 @@ public class Chico {
             httpSession.setAttribute(Chico.USER_KEY, username);
             sessions.put(httpSession.getId(), httpSession);
 
-            Cookie cookie = new Cookie(Chico.COOKIE, httpSession.getId());
-            cookie.setPath("/");
+            if(!Chico.isJetty()){
+                Cookie cookie = new Cookie(Chico.COOKIE, httpSession.getId());
+                cookie.setPath("/");
 
-            HttpServletResponse resp = Chico.getHttpResponse();
-            resp.addCookie(cookie);
+                HttpServletResponse resp = Chico.getHttpResponse();
+                resp.addCookie(cookie);
+            }
+
             
             return true;
 
@@ -80,6 +83,8 @@ public class Chico {
 
         return false;
     }
+
+
 
     public static boolean signout(){
         HttpServletRequest req = Chico.getHttpRequest();
@@ -194,6 +199,16 @@ public class Chico {
     public static boolean configure(DbSecurityAccess dbSecurityAccess){
         Chico.dbSecurityAccess = dbSecurityAccess;
         return true;
+    }
+
+    public static boolean createit = false;
+
+    public static void manualCookie(boolean create) {
+        createit = create;
+    }
+
+    public static boolean createCookie(){
+        return createit;
     }
 
 }

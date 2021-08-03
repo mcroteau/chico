@@ -1,6 +1,5 @@
-package chico.support;
+package chico;
 
-import chico.Chico;
 import jakarta.servlet.*;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

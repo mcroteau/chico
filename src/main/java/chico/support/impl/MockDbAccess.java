@@ -1,6 +1,6 @@
-package chico.support.access.impl;
+package chico.support.impl;
 
-import chico.support.access.DbSecurityAccess;
+import chico.support.DbSecurityAccess;
 import chico.Chico;
 
 import java.util.HashSet;

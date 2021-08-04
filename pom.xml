@@ -3,7 +3,7 @@
 	<groupId>dev.j3ee</groupId>
 	<artifactId>chico</artifactId>
 	<packaging>jar</packaging>
-	<version>0.1-SNAPSHOT</version>
+	<version>0.1</version>
 	<name>Chico</name>
 	<description>Chico is a small security plugin built for the Jakarta EE platform.</description>
 	<url>https://github.com/mcroteau/Chico/</url>

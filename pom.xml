@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>dev.j3ee</groupId>
-	<artifactId>chico</artifactId>
+	<groupId>xyz.sheswayhot</groupId>
+	<artifactId>dude</artifactId>
 	<packaging>jar</packaging>
-	<version>0.1-SNAPSHOT</version>
+	<version>0.2-SNAPSHOT</version>
 
-	<name>Chico Java Security Plugin</name>
+	<name>Chico</name>
 	<description>Chico is a small security plugin built for the Jakarta EE platform.</description>
 	<url>https://mcroteau.github.io/Chico/</url>
 
@@ -154,10 +154,14 @@
 		<connection>scm:git:git://github.com/mcroteau/Chico.git</connection>
 		<developerConnection>scm:git:git@github.com:mcroteau/Chico.git</developerConnection>
 		<url>https://github.com/mcroteau/Chico</url>
-		<tag>v0.1</tag>
+		<tag>v0.2</tag>
 	</scm>
 
 	<distributionManagement>
+		<relocation>
+			<groupId>dev.j3ee</groupId>
+			<artifactId>chico</artifactId>
+		</relocation>
 		<snapshotRepository>
 			<id>ossrh</id>
 			<url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>

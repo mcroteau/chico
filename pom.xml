@@ -3,7 +3,7 @@
 	<groupId>xyz.sheswayhot</groupId>
 	<artifactId>dude</artifactId>
 	<packaging>jar</packaging>
-	<version>0.2-SNAPSHOT</version>
+	<version>0.2</version>
 
 	<name>Chico</name>
 	<description>Chico is a small security plugin built for the Jakarta EE platform.</description>

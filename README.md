@@ -5,20 +5,18 @@ built for the Jakarta EE specification. It is very simple
 to implement. 
 
 ### Installation 
-`
+```
 <dependency>
     <groupId>dev.j3ee</groupId>
     <artifactId>chico</artifactId>
     <version>0.1</version>
 </dependency>
-`
+```
 
 ### Configuration
 
 In order to leverage Chico, you need to initialize 
-a data layer by implementing the following:
-
-`DbSecurityAccess`
+a data layer by implementing the **DbSecurityAccess**
 
 Here is a sample DbSecurityAccess implementation: 
 

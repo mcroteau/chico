@@ -1,4 +1,4 @@
-<img src="https://static.thenounproject.com/png/6246-200.png" width="201px"/>
+<img src="https://static.thenounproject.com/png/6246-200.png" width="120px"/>
 
 #  Chico
 

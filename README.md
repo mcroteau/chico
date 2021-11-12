@@ -144,7 +144,8 @@ public class AuthService {
 
 ```
 
-Chico is now ready to be used! If you need something more, 
+Chico is now ready to be used! 
+If you need something more, 
 we recommend ApacheShiro, it is a real Bull Dog!
 
 Thank you!

@@ -125,7 +125,7 @@ public class AuthService {
         try{
             String username = req.getParameter("username");
             String password = req.getParameter("password");
-            if(!signin(username, password)){
+            if(!Chico.signin(username, password)){
                 data.put("message", "Wrong username and password");
                 return "[redirect]/signin";
             }
@@ -145,7 +145,7 @@ public class AuthService {
     }
 
     public String deAuthenticate(ResponseData data, HttpServletRequest req) {
-        signout();
+        Chico.signout();
         data.put("message", "Successfully signed out");
         req.getSession().setAttribute("username", "");
         req.getSession().setAttribute("userId", "");

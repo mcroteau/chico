@@ -122,24 +122,15 @@ public class AuthService {
 
     public String authenticate(ResponseData data, HttpServletRequest req) {
 
-        try{
-            String username = req.getParameter("username");
-            String password = req.getParameter("password");
-            if(!Chico.signin(username, password)){
-                data.put("message", "Wrong username and password");
-                return "[redirect]/signin";
-            }
-
-            User authdUser = userRepo.getByUsername(username);
-
-            req.getSession().setAttribute("username", authdUser.getUsername());
-            req.getSession().setAttribute("userId", authdUser.getId());
-
-        } catch ( Exception e ) {
-            e.printStackTrace();
-            data.put("message", "Please yell at one of us, something is off.");
-            return "[redirect]/";
+        String username = req.getParameter("username");
+        String password = req.getParameter("password");
+        if(!Chico.signin(username, password)){
+            data.put("message", "Wrong username and password");
+            return "[redirect]/signin";
         }
+
+        User authdUser = userRepo.getByUsername(username);
+        req.getSession().setAttribute("userId", authdUser.getId());
 
         return "[redirect]/home";
     }
@@ -147,8 +138,6 @@ public class AuthService {
     public String deAuthenticate(ResponseData data, HttpServletRequest req) {
         Chico.signout();
         data.put("message", "Successfully signed out");
-        req.getSession().setAttribute("username", "");
-        req.getSession().setAttribute("userId", "");
         return "[redirect]/";
     }
 }
